@@ -1,0 +1,11 @@
+ <div id="links">
+      <table id="linkTable">
+      
+        <tr><td><a href="/dashboard.html">Notepad</a></td></tr>
+        <tr><td><a href="/taskLogger.html" class="active">Task-Logger</a></td></tr>
+        <tr><td><a href="/calendar.html">Calendar</a></td></tr>
+        <tr><td><a href="/agenda.html">Agenda</a></td></tr>
+        <tr><td><a href="/help.html">Help</a></td></tr>
+        
+      </table>
+    </div>

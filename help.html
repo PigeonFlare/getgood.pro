@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Side Navigation Bar</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    #sidebar {
+      height: 100%;
+      width: 150px;
+      position: fixed;
+      background-color: #f2f2f2;
+      overflow-x: hidden;
+      padding-top: 20px;
+      
+    }
+
+    #sidebar a {
+      padding: 7.5px 5px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #787777;
+      font-size: 17px;
+      display: block;
+      transition: 0.3s;
+      margin-bottom: 5px; /* Adds some spacing between rectangles */
+    }
+
+    #sidebar a:hover,
+    #sidebar a:active {
+      background-color: #c2c0c0; /* Dark grey color on hover or press */
+      color: #787777; /* White text on hover or press */
+    }
+
+    #main-content {
+      margin-left: 250px;
+      padding: 16px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="sidebar">
+  <a href="/dashboard.html">Dashboard</a>
+  <a href="/taskmanager.html">Task Manager</a>
+  <a href="/agenda.html">Agenda</a>
+  <a href="/help.html">Help</a>
+</div>
+
+</body>
+</html>
+
+under construction

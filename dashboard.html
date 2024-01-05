@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Side Navigation Bar</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    #sidebar {
+      height: 100%;
+      width: 150px;
+      position: fixed;
+      background-color: #f2f2f2;
+      overflow-x: hidden;
+      padding-top: 20px;
+      
+    }
+
+    #sidebar a {
+      padding: 7.5px 5px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #787777;
+      font-size: 17px;
+      display: block;
+      transition: 0.3s;
+      margin-bottom: 5px; /* Adds some spacing between rectangles */
+    }
+
+    #sidebar a:hover,
+    #sidebar a:active {
+      background-color: #c2c0c0; /* Dark grey color on hover or press */
+      color: #787777; /* White text on hover or press */
+    }
+
+    #main-content {
+      margin-left: 250px;
+      padding: 16px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="sidebar">
+  <a href="/dashboard.html">Dashboard</a>
+  <a href="/taskmanager.html">Task Manager</a>
+  <a href="/agenda.html">Agenda</a>
+  <a href="/help.html">Help</a>
+</div>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel='stylesheet'>
+    <link rel="stylesheet" href="style2.css">
+    <style>
+        /* Additional CSS for layout */
+        .box-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .box-info li {
+            flex: 0 0 30%;
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .box-info li:nth-child(3) {
+            position: relative;
+        }
+
+        .daily-notes-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .daily-notes-box textarea {
+            flex: 1;
+            margin-top: 10px;
+            resize: none;
+            border: none;
+            outline: none;
+            background-color: transparent;
+        }
+    </style>
+    <title>AdminHub</title>
+</head>
+<body>
+    <!-- SIDEBAR -->
+    
+    <!-- SIDEBAR -->
+
+    <!-- CONTENT -->
+    <section id="content">
+        <!-- NAVBAR -->
+        <nav>
+           
+           
+            
+        </nav>
+        <!-- NAVBAR -->
+
+        <!-- MAIN -->
+        <main>
+            <div class="head-title">
+                <div class="left">
+                    <h1>Dashboard</h1>
+                    <ul class="breadcrumb">
+                        <li>
+                            <a href="#">Dashboard</a>
+                        </li>
+                        <li><i class='bx bx-chevron-right' ></i></li>
+                        <li>
+                            <a class="active" href="#">Home</a>
+                        </li>
+                    </ul>
+                </div>
+               
+            </div>
+
+            <ul class="box-info">
+                <li>
+                  
+<div class="tenor-gif-embed" data-postid="19097735" data-share-method="host" data-aspect-ratio="1.63265" data-width="100%"><a href="https://tenor.com/view/lofi-gif-19097735">Lofi GIF</a>from <a href="https://tenor.com/search/lofi-gifs">Lofi GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>       
+</li>
+
+
+                      
+                    
+                </li>
+                <li>
+                    <i class='bx bxs-group'></i>
+                    <span class="text">
+                        <h3>Quote of the Day</h3>
+                        <p>“Lost time is never found again.” – Benjamin Franklin</p>
+                    </span>
+                </li>
+                <li>
+                   
+                    <span class="text">
+                       
+                        <div class="daily-notes-box">
+                            <textarea placeholder="Add daily notes..."></textarea>
+                        </div>
+                    </span>
+                </li>
+            </ul>
+
+            <div class="table-data">
+                <div class="order">
+                    <div class="head">
+                        <h3>Recent Login History</h3>
+                        <i class='bx bx-search' ></i>
+                        <i class='bx bx-filter' ></i>
+                    </div>
+                    <table id="loginHistoryTable">
+                        <thead>
+                            <tr>
+                                <th>User</th>
+                                <th>Login Date</th>
+                                <th>Login Time</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Login history data will be populated here using JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="todo">
+                    <div class="head">
+                        <h3>Todos</h3>
+                        <i class='bx bx-plus' onclick="addTodo()"></i>
+                        <i class='bx bx-filter' ></i>
+                    </div>
+                    <ul id="todoList" class="todo-list">
+                        <!-- Todo list items will be populated here using JavaScript -->
+                    </ul>
+                </div>
+            </div>
+        </main>
+        <!-- MAIN -->
+    </section>
+    <!-- CONTENT -->
+
+    <script src="script.js"></script>
+    <script>
+        // Updated JavaScript code for adding dynamic content with editable and deletable todo task
+        function addTodo() {
+            var todoList = document.getElementById("todoList");
+            var newTodo = document.createElement("li");
+
+            // Create an input field for editing the todo task name
+            var inputField = document.createElement("input");
+            inputField.type = "text";
+            inputField.placeholder = "New Todo";
+
+            // Create a save button to save the edited task name
+            var saveButton = document.createElement("button");
+            saveButton.innerHTML = "Save";
+            saveButton.onclick = function() {
+                // Replace the input field with the edited task name and add delete button
+                newTodo.innerHTML = '<p>' + inputField.value + '</p>' +
+                                     '<i class="bx bx-dots-vertical-rounded"></i>' +
+                                     '<button class="delete-btn" onclick="deleteTodo(this.parentNode)">Delete</button>';
+
+                // Save todo list to local storage
+                saveTodoList();
+            };
+
+            newTodo.appendChild(inputField);
+            newTodo.appendChild(saveButton);
+
+            todoList.appendChild(newTodo);
+        }
+
+        // Function to delete a todo task
+        function deleteTodo(todoItem) {
+            var todoList = document.getElementById("todoList");
+            todoList.removeChild(todoItem);
+
+            // Save todo list to local storage after deletion
+            saveTodoList();
+        }
+
+        // Function to save todo list to local storage
+        function saveTodoList() {
+            var todoList = document.getElementById("todoList");
+            var todoItems = todoList.getElementsByTagName("li");
+            var todos = [];
+
+            // Collect todo items
+            for (var i = 0; i < todoItems.length; i++) {
+                var todoText = todoItems[i].querySelector("p").textContent;
+                todos.push(todoText);
+            }
+
+            // Save to local storage
+            localStorage.setItem("todos", JSON.stringify(todos));
+        }
+
+        // Function to load todo list from local storage
+        function loadTodoList() {
+            var todoList = document.getElementById("todoList");
+            var todos = JSON.parse(localStorage.getItem("todos")) || [];
+
+            // Populate todo list
+            todos.forEach(function(todoText) {
+                var newTodo = document.createElement("li");
+                newTodo.innerHTML = '<p>' + todoText + '</p>' +
+                                     '<i class="bx bx-dots-vertical-rounded"></i>' +
+                                     '<button class="delete-btn" onclick="deleteTodo(this.parentNode)">Delete</button>';
+                todoList.appendChild(newTodo);
+            });
+        }
+
+        // Function to update login history and display it
+        function updateLoginHistory() {
+            var loginHistoryTable = document.getElementById("loginHistoryTable");
+            var loginHistoryData = JSON.parse(localStorage.getItem("loginHistory")) || [];
+
+            // Add current login information
+            var currentDateTime = getCurrentDateTime();
+            var user = "John Doe";  // You can replace this with the actual user
+
+            loginHistoryData.unshift({ user: user, date: currentDateTime.date, time: currentDateTime.time });
+
+            // Update local storage with the new data
+            localStorage.setItem("loginHistory", JSON.stringify(loginHistoryData));
+
+            // Clear existing rows
+            while (loginHistoryTable.rows.length > 1) {
+                loginHistoryTable.deleteRow(1);
+            }
+
+            // Populate login history table
+            loginHistoryData.forEach(function(entry) {
+                var newRow = loginHistoryTable.insertRow(-1);
+                var cell1 = newRow.insertCell(0);
+                var cell2 = newRow.insertCell(1);
+                var cell3 = newRow.insertCell(2);
+                cell1.innerHTML = '<p>' + entry.user + '</p>';
+                cell2.innerHTML = entry.date;
+                cell3.innerHTML = entry.time;
+            });
+        }
+
+        // Function to get current date and time
+        function getCurrentDateTime() {
+            var now = new Date();
+            var date = now.toLocaleDateString();
+            var time = now.toLocaleTimeString();
+            return { date: date, time: time };
+        }
+
+        // Call the function to update login history and todo list on page load
+        updateLoginHistory();
+        loadTodoList();
+</script>
+</body>
+</html>
