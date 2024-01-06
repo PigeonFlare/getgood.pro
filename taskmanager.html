@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Side Navigation Bar</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    #sidebar {
+      height: 100%;
+      width: 150px;
+      position: fixed;
+      background-color: #f2f2f2;
+      overflow-x: hidden;
+      padding-top: 20px;
+      
+    }
+
+    #sidebar a {
+      padding: 7.5px 5px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #787777;
+      font-size: 17px;
+      display: block;
+      transition: 0.3s;
+      margin-bottom: 5px; /* Adds some spacing between rectangles */
+    }
+
+    #sidebar a:hover,
+    #sidebar a:active {
+      background-color: #c2c0c0; /* Dark grey color on hover or press */
+      color: #787777; /* White text on hover or press */
+    }
+
+    #main-content {
+      margin-left: 250px;
+      padding: 16px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="sidebar">
+  <a href="/dashboard.html">Dashboard</a>
+  <a href="/taskmanager.html">Task Manager</a>
+  <a href="/agenda.html">Agenda</a>
+  <a href="/help.html">Help</a>
+</div>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Task Logger</title>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.40/moment-timezone.min.js"
+      defer
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <script src="taskmanager.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+      table {
+        border-collapse: collapse;
+        display: inline-block;
+   
+      }
+
+      #taskHistory > * > tr,
+      #taskHistory > * > * > td,
+      #taskHistory > * > * > th {
+        border: 2px solid black;
+        padding: 25px;
+      }
+    </style>
+
+   
+   
+<center>
+  
+    <h1>Task Logger</h1>
+    </center>
+   
+    <form>
+      <label for="task">Task:</label>
+      <input type="text" id="task" name="task" />
+      <button type="button" id="toggleTask">Start Task</button>
+      <label>This task is productive: </label>
+      <input type="checkbox" id="productive" />
+      <h2 id="stopwatch">00:00:00</h2>
+    </form>
+    
+    
+    <h2>Task History</h2>
+    
+    <table id="taskHistory">
+      <thead>
+        <tr>
+          <th>Task</th>
+          <th>Date</th>
+          <th>Controls</th>
+          <th>Productive</th>
+          <th>Duration</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <center>
+    <button id="toggleStopwatch">Show Stopwatch</button>
+    </center>
+  
+    <canvas id="pie" style="max-width: 250px; max-height: 250px" ></canvas>
+  </body>
+</html>

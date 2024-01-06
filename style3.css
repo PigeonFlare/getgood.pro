@@ -1,0 +1,261 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'League Spartan', sans-serif; /* Use League Spartan font */
+    font-weight: bold;
+}
+
+.navbar {
+    background: transparent;
+    top: 0;
+    left: 0;
+    padding: 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black; /* Set the color of your links */
+    margin-left: 25px;/* Adjust the spacing between links */
+    display: inline-block; /* Ensure proper spacing */
+    font-size: 20px;
+}
+.navbar-logo {
+    width: 50px; /* Set the width of your logo */
+    height: auto; /* Maintain the aspect ratio */
+}
+.centered-title {
+    text-align: center;
+    margin-top: 50px; /* Adjust the spacing between the navbar and the title */
+    color:black;
+}
+
+h2 {
+  font-family: 'League Spartan', sans-serif; /* Use League Spartan font */
+    font-size: 25px;
+  
+    color: black; /* Set the color of your title text */
+}
+h4 {
+  font-family: 'League Spartan', sans-serif; /* Use League Spartan font */
+    font-size: 50px;
+    margin-top:50px;
+    margin-bottom:40px;
+    color: white; /* Set the color of your title text */
+}
+h5 {
+  font-family: 'League Spartan', sans-serif; /* Use League Spartan font */
+    font-size: 30px;
+    margin-top:10px;
+    margin-bottom:10px;
+    color: black; /* Set the color of your title text */
+}
+h3 {
+  font-family: 'League Spartan', sans-serif; /* Use League Spartan font */
+    font-size: 25px;
+    color: black; /* Set the color of your title text */
+    margin-bottom:20px;
+}
+h1 {
+  font-family: 'League Spartan', sans-serif; /* Use League Spartan font */
+    font-size: 25px;
+    color: #4287f5; /* Set the color of your title text */
+    margin-bottom:20px;
+}
+.centered-title h1 {
+    font-family: 'League Spartan', sans-serif; /* Use League Spartan font */
+    font-weight: bold;
+    font-size: 100px;
+    color: #333; /* Set the color of your title text */
+    margin-bottom: 30px;
+}
+
+.categories {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px; /* Adjust the spacing between the image and categories */
+    
+}
+
+.category {
+    width: 30%; /* Adjust the width of each category */
+    text-align: center;
+}
+
+.mama {
+    width: 91%; /* Adjust the width of each category */
+    border: 1px solid lightgrey; /* Border around each category */
+    border-radius: 10px; /* Border-radius for rounded corners */
+    padding: 10px; /* Add padding for spacing */
+    transform: translate(65px);
+    
+}
+.mama2 {
+    width: 91%; /* Adjust the width of each category */
+    border: 1px solid lightgrey; /* Border around each category */
+    background-color: white;
+    border-radius: 10px; /* Border-radius for rounded corners */
+    padding: 10px; /* Add padding for spacing */
+    transform: translate(65px);
+  margin-top:50px;
+    margin-bottom:50px;
+    
+}
+.mama3 {
+    width: 50%; /* Adjust the width of each category */
+    border: 1px solid lightgrey; /* Border around each category */
+    background-color: white;
+    border-radius: 10px; /* Border-radius for rounded corners */
+    padding: 10px; /* Add padding for spacing */
+    transform: translate(360px);
+  margin-top:50px;
+    margin-bottom:50px;
+    
+}
+.category p {
+    color: #3d3b3d; /* Set the color of category descriptions */
+    font-size: 20px;
+    width: 100%;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.footer {
+    font-size: 18px;
+    width: 100%;
+    background-color: #292828;
+    color: #ebebeb;
+    padding: 30px 0;
+    margin-top: 100px;
+    border: 1px solid #292828; /* Border around each category */
+    
+}
+  
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+  
+.footer-content {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+}
+
+  
+.footer-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top:20px;
+    text-align: center;
+}
+  
+.footer-menu li {
+    display: inline-block;
+    margin-right: 20px;
+}
+  
+.footer-menu li:last-child {
+    margin-right: 0;
+}
+  
+.footer-menu a {
+    color: #ebebeb;
+    text-decoration: none;
+    
+}
+  
+.social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #ebebeb;
+}
+  
+.social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+}
+  
+.social-icons li:last-child {
+    margin-right: 0;
+}
+  
+.social-icons a {
+    color: #ebebeb;
+    text-decoration: none;
+    font-size: 20px;
+}
+  
+.footer-bottom {
+    margin-top: 50px;
+    text-align: center;
+}
+  
+.footer-bottom p {
+    margin: 0;
+}
+  
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 20px;
+    }
+    .footer-menu{
+        text-align: left;
+    }
+    .footer-menu li {
+      display: block;
+      margin-bottom: 10px;
+    }
+}
+  
+.attribute{
+    position: absolute;
+    bottom: 10px;
+}
+ .custom-button {
+      display: inline-block;
+      padding: 10px 20px;
+      text-decoration: none;
+      background-color: white;
+      color: black;
+      border-radius: 5px;
+      font-weight: bold;
+      margin-top: 50px;
+   margin-bottom: 50px;
+      transform: translate(-50px);
+      border: 2px solid #292828; /* Border around each category */
+      transition: background-color 0.3s ease;
+    }
+
+    /* Change background color on hover */
+    .custom-button:hover {
+      background-color: #3f9bfc;
+}
+ .custom-button1 {
+     
+      display: inline-block;
+      padding: 10px 20px;
+      text-decoration: none;
+      background-color: white;
+      color: black;
+      border-radius: 5px;
+      font-weight: bold;
+      margin-top: 10px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      border: 2px solid #292828; /* Border around each category */
+      transition: background-color 0.3s ease;
+    }
+
+    /* Change background color on hover */
+    .custom-button1:hover {
+      background-color: #3f9bfc;
+}
